@@ -10,6 +10,10 @@ import Footer from "./component/main/Footer";
 import Home from "./component/main/Home";
 import Recipe from "./component/recipe/Recipe";
 import RecipeDetail from "./component/recipe/RecipeDetail";
+import Category from "./component/food/Category";
+import CategoryFoodList from "./component/food/CategoryFoodList";
+import Detail from "./component/food/Detail";
+
 // 조립기
 class App extends Component{
   render() {
@@ -28,6 +32,14 @@ class App extends Component{
                           <Route exact path={"/"} component={Home}/>
                           <Route path={"/recipe/list"} component={Recipe}/>
                           <Route path={"/recipe/detail/:no"} component={RecipeDetail}/>
+                          <Route path={"/food/category"} component={Category}/>
+                          <Route path={"/food/category_food_list/:cno"} component={CategoryFoodList}/>
+                          {
+                              /*
+                                   ~food/category_food_list/1 ==> PathValiable
+                               */
+                          }
+                          <Route path={"/food/detail/:no"} component={Detail}/>
                       </Switch>
                     </div>
                   </div>

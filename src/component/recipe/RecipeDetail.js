@@ -51,20 +51,21 @@ class RecipeDetail extends Component{
         {this.state.recipe_detail.title} => ${vo.title}
      */
     render() {
-        let foodmake=this.state.food.map((f,index)=>
-            <table className={"table"}>
-                <tr>
-                    <td width={"80%"} style={{"fontSize":"20px","fontWeight":"bold"}}>{f}</td>
-                    <td width={"20%"}><img src={this.state.img[index]}
-                                           style={{"width":"200px","height":"200px"}}/></td>
-                </tr>
-            </table>
-        )
+        let foodmake= this.state.food.map((f, index) =>
+                <table className={"table"}>
+                    <tr>
+                        <td width={"90%"} style={{"fontSize": "15px", "fontWeight": "bold"}}>{f}</td>
+                        <td width={"10%"}><img src={this.state.img[index]}
+                                               style={{"width": "120px", "height": "90px"}}/></td>
+                    </tr>
+                </table>
+            )
+
         return (
             <div className={"row"}>
                 <table className={"table"}>
                     <tr>
-                        <td><img src={this.state.recipe_detail.poster} style={{"width":"100%"}}/></td>
+                        <td className={"text-center"}><img src={this.state.recipe_detail.poster} style={{"width":"960px","height":"350px"}}/></td>
                     </tr>
                     <tr>
                         <td className={"text-center"}><h3>{this.state.recipe_detail.title}</h3></td>
@@ -74,6 +75,7 @@ class RecipeDetail extends Component{
                     </tr>
                 </table>
                 <table className={"table"}>
+
                     <tr>
                         <td className={"text-center"}><img src={"http://localhost:3000/info1.png"}/></td>
                         <td className={"text-center"}><img src={"http://localhost:3000/info2.png"}/></td>
@@ -86,6 +88,7 @@ class RecipeDetail extends Component{
                     </tr>
                 </table>
                 <table className={"table"}>
+                    <caption><h3>레시피 만드는 방법</h3></caption>
                     <tr>
                         <td>
                             {foodmake}
@@ -93,9 +96,10 @@ class RecipeDetail extends Component{
                     </tr>
                 </table>
                 <table className={"table"}>
+
                     <tr>
                         <td className={"text-right"}><img src={this.state.recipe_detail.chef_poster}
-                                 style={{"width":"100px","height":"100px"}}/></td>
+                                 style={{"width":"75px","height":"75px"}}/></td>
                         <td className={"text-left"}>{this.state.recipe_detail.chef}<br/>
                             {this.state.recipe_detail.chef_profile}
                         </td>

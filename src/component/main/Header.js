@@ -19,7 +19,7 @@ class Header extends Component{
                                <li><NavLink to={"/recipe/chef"}>쉐프목록</NavLink></li>
                            </ul>
                        </li>
-                       <li><a href="#">맛집</a></li>
+                       <li><NavLink to={"/food/category"}>맛집</NavLink></li>
                        <li><a href="#">서울 여행</a></li>
                    </ul>
                </div>
