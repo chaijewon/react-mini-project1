@@ -85,14 +85,17 @@ function Detail(props)
          <Fragment>
               <div className={"row"}>
                    <table className={"table"}>
+                       <tbody>
                         <tr>
                              {html}
                         </tr>
+                       </tbody>
                    </table>
               </div>
               <div className={"row"}>
                    <div className={"col-sm-7"}>
                       <table className={"table"}>
+                          <tbody>
                            <tr>
                                 <td colSpan={"2"}>
                                      <h3>
@@ -133,12 +136,13 @@ function Detail(props)
                                   </ul>
                               </td>
                           </tr>
+                          </tbody>
                       </table>
                    </div>
                    <div className={"col-sm-5"}>
                        <div id="map" style={{"width": "100%", "height": "350px"}}></div>
                    </div>
-              </div>
+             </div>
          </Fragment>
      )
 }

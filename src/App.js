@@ -13,6 +13,11 @@ import RecipeDetail from "./component/recipe/RecipeDetail";
 import Category from "./component/food/Category";
 import CategoryFoodList from "./component/food/CategoryFoodList";
 import Detail from "./component/food/Detail";
+import Nature from "./component/seoul/Nature";
+import Hotel from "./component/seoul/Hotel";
+import Location1 from "./component/seoul/Location1";
+import News from "./component/food/News";
+import FoodHouseFind from "./component/food/FoodHouseFind";
 
 // 조립기
 class App extends Component{
@@ -40,6 +45,11 @@ class App extends Component{
                                */
                           }
                           <Route path={"/food/detail/:no"} component={Detail}/>
+                          <Route path={"/seoul/location"} component={Location1}/>
+                          <Route path={"/seoul/nature"} component={Nature}/>
+                          <Route path={"/seoul/hotel"} component={Hotel}/>
+                          <Route path={"/food/find"} component={FoodHouseFind}/>
+                          <Route path={"/food/news"} component={News}/>
                       </Switch>
                     </div>
                   </div>
