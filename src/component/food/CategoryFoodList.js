@@ -64,6 +64,7 @@ function CategoryFoodList(props)
      */
     let html=foodList.map((food)=>
          <table className={"table"}>
+             <tbody>
              <tr>
                  <td className={"text-center"} width={"30%"} rowSpan={"4"}>
                      <NavLink to={"/food/detail/"+food.no}>
@@ -86,6 +87,7 @@ function CategoryFoodList(props)
                  <td width={"20%"}>음식종류</td>
                  <td width={"50%"}>{food.type}</td>
              </tr>
+             </tbody>
          </table>
     )
     return (
@@ -99,9 +101,11 @@ function CategoryFoodList(props)
             <div style={{"height":"30px"}}></div>
             <div className={"row"}>
               <table className={"table"}>
+                  <tbody>
                   <tr>
                       <td>{html}</td>
                   </tr>
+                  </tbody>
               </table>
             </div>
         </Fragment>

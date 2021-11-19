@@ -20,7 +20,17 @@ class Header extends Component{
                            </ul>
                        </li>
                        <li><NavLink to={"/food/category"}>맛집</NavLink></li>
-                       <li><a href="#">서울 여행</a></li>
+                       <li className="dropdown">
+                           <a className="dropdown-toggle" data-toggle="dropdown" href="#">서울여행
+                               <span className="caret"></span></a>
+                           <ul className="dropdown-menu">
+                               <li><NavLink to={"/seoul/location"}>명소</NavLink></li>
+                               <li><NavLink to={"/seoul/nature"}>자연/관광</NavLink></li>
+                               <li><NavLink to={"/seoul/hotel"}>호텔</NavLink></li>
+                           </ul>
+                       </li>
+                       <li><NavLink to={"/food/find"}>맛집검색</NavLink></li>
+                       <li><NavLink to={"/food/news"}>뉴스</NavLink></li>
                    </ul>
                </div>
            </nav>
